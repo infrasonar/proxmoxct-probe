@@ -68,4 +68,3 @@ DRY_RUN=test.yaml python main.py
 ## Proxmox API documentation
 
 https://pve.proxmox.com/pve-docs/api-viewer
-# proxmoxct-probe
