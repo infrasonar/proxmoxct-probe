@@ -1,10 +1,5 @@
-from typing import Optional, Any
 from libprobe.asset import Asset
 from ..helpers import api_request
-
-
-def to_float(inp: Any) -> Optional[float]:
-    return inp if inp is None else float(inp)
 
 
 async def check_ct(
@@ -18,7 +13,7 @@ async def check_ct(
     item = {
         'name': ct.get('name'),
         'vmid': ct['vmid'],  # int
-        'cpu': to_float(ct.get('cpu')),  # float
+        'cpu': ct.get('cpu', 0) * 100.0,  # float
         'cpus': ct.get('cpus'),  # int
         'disk': ct.get('disk'),  # int
         'swap': ct.get('swap'),  # int
