@@ -1,12 +1,12 @@
 from libprobe.probe import Probe
-from lib.check.ct import check_ct
+from lib.check.ct import CheckCT
 from lib.version import __version__ as version
 
 
 if __name__ == '__main__':
-    checks = {
-        'ct': check_ct
-    }
+    checks = (
+        CheckCT,
+    )
 
     probe = Probe("proxmoxct", version, checks)
 
