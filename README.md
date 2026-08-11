@@ -43,14 +43,15 @@ proxmoxct:
 ## Dry run
 
 Available checks:
-- `proxmoxct`
+- `ct`
+- `firewall`
 
 Create a yaml file, for example _(test.yaml)_:
 
 ```yaml
 asset:
   name: "foo.local"
-  check: "proxmoxct"
+  check: "ct"
   config:
     address: "10.0.0.1"
     node: "pve"
