@@ -9,7 +9,6 @@ class CheckCT(Check):
 
     @staticmethod
     async def run(asset: Asset, local_config: dict, config: dict) -> dict:
-
         uri = '/status/current'
         data = await api_request(asset, local_config, config, uri, 'lxc')
         ct = data['data']

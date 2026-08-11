@@ -44,6 +44,7 @@ proxmoxct:
 
 Available checks:
 - `ct`
+- `config`
 - `firewall`
 
 Create a yaml file, for example _(test.yaml)_:
